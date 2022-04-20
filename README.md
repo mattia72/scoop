@@ -1,14 +1,13 @@
 # scoop-it
-My scoop bucket
+My scoop bucket with:
+* sqlite3dll
 
-## Auto update
+
+## Update
 
 ```ps1
 cd $env:HOME\dev\scoop-it
 
-# See the available parameters
-nvim ('{0}/bin/checkver.ps1' -f (scoop prefix scoop))
-
-# `-forceupdate` is useful for update hash
+# update hash
 .\bin\checkver.ps1 sqlite3dll -ForceUpdate
 ```
