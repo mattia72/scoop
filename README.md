@@ -6,7 +6,7 @@ My scoop bucket with:
 ## Update
 
 ```ps1
-cd $env:HOME\dev\scoop-it
+cd $env:HOME\dev\scoop
 
 # update hash
 .\bin\checkver.ps1 sqlite3dll -ForceUpdate
