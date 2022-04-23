@@ -11,3 +11,7 @@ cd $env:HOME\dev\scoop-it
 # update hash
 .\bin\checkver.ps1 sqlite3dll -ForceUpdate
 ```
+
+## Thanks 
+
+https://github.com/younger-1/scoop-it
