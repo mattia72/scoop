@@ -1,4 +1,4 @@
-# scoop-it
+# scoop
 My scoop bucket with:
 * sqlite3dll
 
