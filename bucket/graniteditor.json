@@ -7,8 +7,7 @@
     "hash": "2c314816813ab292bf1c9a93749ad9f4ca4ead9195df939ee88cc5b35cdb3dfa",
     "installer": {
         "script": [
-            "Expand-7zipArchive \"$dir\\GranitEditorInstaller.7z\" \"$dir\" -ExtractDir 'Application'",
-            "Remove-Item -Path \"$dir\" -Include *.pdb, *.7z  -Force -Recurse"
+            "Remove-Item -Path \"$dir\" -Include *.pdb  -Force -Recurse"
         ]
     },
     "bin": "GranitEditor.exe",
@@ -20,7 +19,7 @@
         ]
     ],
     "persist": [
-      "GranitEditor.exe.config "
+      "GranitEditor.exe.config"
     ],
     "checkver": {
         "github": "https://github.com/mattia72/GranitEditor"
