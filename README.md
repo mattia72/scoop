@@ -1,15 +1,15 @@
 # scoop
 My scoop bucket with:
 * sqlite3dll
-
+* graniteditor
 
 ## Update
 
 ```ps1
 cd $env:HOME\dev\scoop
 
-# update hash
-.\bin\checkver.ps1 sqlite3dll -ForceUpdate
+# update all hash in manifest files
+.\bin\checkver.ps1 -ForceUpdate
 ```
 
 ## Thanks 
