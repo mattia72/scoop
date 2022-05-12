@@ -1,10 +1,10 @@
 {
-    "version": "1.3.3.172",
+    "version": "1.4.2.0-beta",
     "description": "Pre-release of the transaction group xml generator for GRÁNIT Bank: https://granitbank.hu",
     "homepage": "https://github.com/mattia72/GranitEditor",
     "license": "MIT",
-    "url": "https://github.com/mattia72/GranitEditor/releases/download/1.3.3.172/GranitEditorInstaller.msi#/dl.7z",
-    "hash": "2c314816813ab292bf1c9a93749ad9f4ca4ead9195df939ee88cc5b35cdb3dfa",
+    "url": "https://github.com/mattia72/GranitEditor/releases/download/1.4.2.0-beta/GranitEditorInstaller.msi#/dl.7z",
+    "hash": "5f545c91c313435f728cca7386f1cf2a7dbd592385fea241754096661e752204",
     "installer": {
         "script": "Remove-Item -Path \"$dir\" -Include *.pdb  -Force -Recurse"
     },
@@ -17,8 +17,8 @@
     ],
     "persist": "GranitEditor.exe.config",
     "checkver": {
-        "github": "https://github.com/mattia72/GranitEditor",
-        "regex": "1\.3\.3\.172"
+        "url": "https://github.com/mattia72/GranitEditor/releases",
+        "regex": "([\\d.]+(?:-alpha|-beta))"
     },
     "autoupdate": {
         "url": "https://github.com/mattia72/GranitEditor/releases/download/$version/GranitEditorInstaller.msi#/dl.7z"
