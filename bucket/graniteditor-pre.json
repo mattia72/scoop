@@ -12,10 +12,10 @@
     "shortcuts": [
         [
             "GranitEditor.exe",
-            "GranitEditor"
+            "GranitEditor-Pre"
         ]
     ],
-    "persist": "GranitEditor.exe.config",
+    "persist": "settings.json",
     "checkver": {
         "url": "https://github.com/mattia72/GranitEditor/releases",
         "regex": "([\\d.]+(?:-alpha|-beta))"
