@@ -1,19 +1,14 @@
 {
-    "version": "2.2.1.327",
+    "version": "2.2.1",
     "description": "Mouse without Borders (http://aka.ms/mm) is a product that makes you the captain of your computer fleet by allowing you to control up to four computers from a single mouse and keyboard. This means that with Mouse without Borders you can copy text or drag and drop files across computers.",
     "homepage": "http://aka.ms/mm",
     "license": "Public Domain",
-    "architecture": {
-        "64bit": {
-            "url": "https://download.microsoft.com/download/6/5/8/658AFC4C-DC02-4CB8-839D-10253E89FFF7/MouseWithoutBordersSetup.msi",
-            "hash": "c8b150f7a543f07974bd558c5ceac3f51923285c48fb924f96884eff6e9f30e0"
-        }
-    },
+    "url": "https://github.com/truong2d/mm/releases/download/2.2.1/MouseWithoutBordersSetup.msi#/dl.7z",
+    "hash": "6698dc23f33fea1330e383b9ca5b1699fae6418a8d89e48dc119cb76654f53b1",
     "checkver": {
-        "url": "https://www.sqlite.org/download.html",
-        "regex": "(?sm)\\d+-bit DLL \\(x64\\) for SQLite version ([\\d.]+)\\..*?(?<year>\\d+)/sqlite-tools-win32-x86-(?<clean>\\d+)"
+        "github": "https://github.com/truong2d/mm"
     },
     "autoupdate": {
-        "url": "https://www.sqlite.org/$matchYear/sqlite-dll-win64-x64-$matchClean.zip"
+        "url": "https://github.com/truong2d/mm/releases/download/$version/MouseWithoutBordersSetup.msi#/dl.7z"
     }
 }
