@@ -1,15 +1,15 @@
 # scoop
 My scoop bucket containing:
-[comment]: <> (make a list in vim)
-[comment]: <> (:redir >list)
-[comment]: <> (! dir bucket)
-[comment]: <> (:redir END)
+<!-- make a list in vim:
+<!-- :redir >list:
+<!-- ! dir bucket
+<!-- :redir END
 
 * dripgrepper.json
 * flicflac.json
 * graniteditor-pre.json
 * graniteditor.json
-* mousewithoutborders-pre.json
+* mousewithoutborders-pre.jsonX
 * mousewithoutborders.json
 * ns-runasdate.json
 * search-ripgrep-ui.json
