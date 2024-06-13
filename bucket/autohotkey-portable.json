@@ -12,32 +12,26 @@
     ],
     "url": "https://github.com/AutoHotkey/AutoHotkey/releases/download/v2.0.16/AutoHotkey_2.0.16.zip",
     "hash": "178f4b8888441e6970682416279fb99a5ffb2844136440becd66a8c62091e435",
-    "--extract_to": "installer",
     "installer": {
         "script": [
-            "New-Item v2 -ItemType Directory -ErrorAction SilentlyContinue",
-            "$real=\"$(Resolve-Path .)\\Autohotkey$($architecture -replace 'bit').exe\"",
-            "$link=\"$(Resolve-Path .)\\v2\\AutoHotkey.exe\"",
+            "New-Item \"$dir\\v2\" -ItemType Directory -ErrorAction SilentlyContinue",
+            "$real=\"$dir\\Autohotkey$($architecture -replace 'bit').exe\"",
+            "$link=\"$dir\\v2\\AutoHotkey.exe\"",
             "Remove-Item $link",
             "cmd /c mklink /h \"$link\" \"$real\""
         ]
     },
-    "--post_install": [
-        "Remove-Item \"$dir\\installer\" -Force -Recurse",
-        "# Persistence",
-        "if (Test-Path \"$persist_dir\\installed-files.csv\") {",
-        "    Get-Content \"$persist_dir\\installed-files.csv\" | Add-Content \"$dir\\UX\\installed-files.csv\"",
-        "    Copy-Item \"$persist_dir\\installed-files\\*\" \"$dir\" -Recurse -ErrorAction SilentlyContinue",
-        "    # Remove old files",
-        "    Remove-Item \"$persist_dir\\installed-files.csv\" -Force",
-        "    Remove-Item \"$persist_dir\\installed-files\" -Force -Recurse",
-        "}"
-    ],
+    "uninstaller": {
+        "script": [
+            "$link=\"$dir\\v2\\AutoHotkey.exe\"",
+            "Remove-Item $link"
+        ]
+    },
     "architecture": {
         "64bit": {
             "bin": [
                 [
-                    "AutoHotkey64.exe", 
+                    "AutoHotkey64.exe",
                     "autohotkey"
                 ],
                 [
@@ -52,31 +46,6 @@
                 "autohotkey"
             ]
         }
-    },
-    "--pre_uninstall": [
-        "# Persistence",
-        "ensure \"$persist_dir\" | Out-Null",
-        "ensure \"$persist_dir\\installed-files\" | Out-Null",
-        "if (Test-Path \"$dir\\UX\\installed-files.csv\") {",
-        "    $csv = Import-Csv \"$dir\\UX\\installed-files.csv\" | Where-Object 'Version' -ne $version",
-        "    if ($csv) {",
-        "        $export = @()",
-        "        $dirs = @()",
-        "        $csv | ForEach-Object {",
-        "            $current = (Get-Item \"$dir\\$($_.'Path')\" -ErrorAction SilentlyContinue).Directory.Name",
-        "            $export += \"$($_.'Hash'),$($_.'Version'),$($_.'Path'),$($_.'Description')\"",
-        "            if (!($dirs.Contains($current)) -and ($_.'Path' -notlike '*.lnk')) { $dirs += $current }",
-        "        }",
-        "        $export | Out-File \"$persist_dir\\installed-files.csv\" -Encoding ASCII",
-        "        $dirs | ForEach-Object { Copy-Item \"$dir\\$_\" \"$persist_dir\\installed-files\" -Recurse -ErrorAction SilentlyContinue }",
-        "    }",
-        "}"
-    ],
-    "uninstaller": {
-        "script": [
-            "$link=\"$(Resolve-Path .)\\v2\\AutoHotkey.exe\"",
-            "Remove-Item $link"
-        ]
     },
     "checkver": {
         "url": "https://www.autohotkey.com/download/2.0/version.txt",
