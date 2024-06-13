@@ -35,16 +35,18 @@
         "64bit": {
             "bin": [
                 [
+                    "AutoHotkey64.exe", 
                     "autohotkey"
                 ],
                 [
-                    "v2\\AutoHotkey32.exe",
+                    "AutoHotkey32.exe",
                     "autohotkey32"
                 ]
             ]
         },
         "32bit": {
             "bin": [
+                "AutoHotkey32.exe",
                 "autohotkey"
             ]
         }
