@@ -73,7 +73,10 @@
         "}"
     ],
     "uninstaller": {
-        "script": "Start-Process \"$dir\\UX\\AutoHotkeyUX.exe\" -ArgumentList @('/script', \"`\"$dir\\UX\\install.ahk`\"\", '/uninstall', '/silent') -Wait"
+        "script": [
+            "$link=\"$(Resolve-Path .)\\v2\\AutoHotkey.exe\"",
+            "Remove-Item $link"
+        ]
     },
     "checkver": {
         "url": "https://www.autohotkey.com/download/2.0/version.txt",
