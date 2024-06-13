@@ -17,7 +17,7 @@
             "New-Item \"$dir\\v2\" -ItemType Directory -ErrorAction SilentlyContinue",
             "$real=\"$dir\\Autohotkey$($architecture -replace 'bit').exe\"",
             "$link=\"$dir\\v2\\AutoHotkey.exe\"",
-            "Remove-Item $link",
+            "Remove-Item $link -ErrorAction SilentlyContinue",
             "cmd /c mklink /h \"$link\" \"$real\""
         ]
     },
