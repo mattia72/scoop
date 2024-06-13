@@ -13,11 +13,13 @@
     "url": "https://github.com/AutoHotkey/AutoHotkey/releases/download/v2.0.16/AutoHotkey_2.0.16.zip",
     "hash": "178f4b8888441e6970682416279fb99a5ffb2844136440becd66a8c62091e435",
     "--extract_to": "installer",
-    "--installer": {
+    "installer": {
         "script": [
-            "$ahk = @('/script', \"`\"$dir\\installer\\UX\\install.ahk`\"\", '/to', \"`\"$dir`\"\", '/user', '/silent')",
-            "if ($global) { $ahk = @('/script', \"`\"$dir\\installer\\UX\\install.ahk`\"\", '/to', \"`\"$dir`\"\", '/silent') }",
-            "Start-Process \"$dir\\installer\\AutoHotkey32.exe\" -ArgumentList $ahk -Wait"
+            "New-Item v2 -ItemType Directory -ErrorAction SilentlyContinue",
+            "$real=\"$(Resolve-Path .)\\Autohotkey$($architecture -replace 'bit').exe\"",
+            "$link=\"$(Resolve-Path .)\\v2\\AutoHotkey.exe\"",
+            "Remove-Item $link",
+            "cmd /c mklink /h \"$link\" \"$real\""
         ]
     },
     "--post_install": [
