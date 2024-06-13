@@ -4,6 +4,7 @@
     "homepage": "https://www.autohotkey.com/",
     "license": "GPL-2.0-or-later",
     "notes": [
+        "To associate *.ahk extension, doubleclick on an *.ahk file and select $dir\\v2\\Autohotkey64.exe", 
         "Install specific version of Interpreter(Default: Latest 1.x):",
         "  - 'autohotkey /script \"$dir\\UX\\install-version.ahk\" [version]'",
         "Uninstall Sub-versions of Interpreter:",
