@@ -12,7 +12,7 @@
     ],
     "url": "https://github.com/AutoHotkey/AutoHotkey/releases/download/v2.0.16/AutoHotkey_2.0.16.zip",
     "hash": "178f4b8888441e6970682416279fb99a5ffb2844136440becd66a8c62091e435",
-    "extract_to": "installer",
+    "--extract_to": "installer",
     "--installer": {
         "script": [
             "$ahk = @('/script', \"`\"$dir\\installer\\UX\\install.ahk`\"\", '/to', \"`\"$dir`\"\", '/user', '/silent')",
