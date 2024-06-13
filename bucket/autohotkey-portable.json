@@ -15,34 +15,27 @@
     "installer": {
         "script": [
             "New-Item \"$dir\\v2\" -ItemType Directory -ErrorAction SilentlyContinue",
-            "$real=\"$dir\\Autohotkey$($architecture -replace 'bit').exe\"",
-            "$link=\"$dir\\v2\\AutoHotkey.exe\"",
-            "Remove-Item $link -ErrorAction SilentlyContinue",
-            "cmd /c mklink /h \"$link\" \"$real\""
-        ]
-    },
-    "uninstaller": {
-        "script": [
-            "$link=\"$dir\\v2\\AutoHotkey.exe\"",
-            "Remove-Item $link"
+            "Move-Item \"$dir\\Autohotkey32.exe\" \"$dir\\v2\"",
+            "Move-Item \"$dir\\Autohotkey64.exe\" \"$dir\\v2\"",
+            "Move-Item \"$dir\\Autohotkey.chm\" \"$dir\\v2\""
         ]
     },
     "architecture": {
         "64bit": {
             "bin": [
                 [
-                    "AutoHotkey64.exe",
+                    "v2\\AutoHotkey64.exe",
                     "autohotkey"
                 ],
                 [
-                    "AutoHotkey32.exe",
+                    "v2\\AutoHotkey32.exe",
                     "autohotkey32"
                 ]
             ]
         },
         "32bit": {
             "bin": [
-                "AutoHotkey32.exe",
+                "v2\\AutoHotkey32.exe",
                 "autohotkey"
             ]
         }
