@@ -35,7 +35,6 @@
         "64bit": {
             "bin": [
                 [
-                    "UX\\AutohotkeyUX.exe",
                     "autohotkey"
                 ],
                 [
@@ -46,7 +45,6 @@
         },
         "32bit": {
             "bin": [
-                "UX\\AutohotkeyUX.exe",
                 "autohotkey"
             ]
         }
