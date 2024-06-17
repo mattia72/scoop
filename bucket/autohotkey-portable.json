@@ -1,6 +1,6 @@
 {
     "version": "2.0.17",
-    "description": "The ultimate automation scripting language for Windows.",
+    "description": "Portable version of the ultimate automation scripting language for Windows.",
     "homepage": "https://www.autohotkey.com/",
     "license": "GPL-2.0-or-later",
     "notes": [
