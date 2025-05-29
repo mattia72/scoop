@@ -30,13 +30,15 @@
             "64bit": {
                 "url": [
                     "https://github.com/mattia72/DripGrepper/releases/download/v$version/DRipGrepper.x64.v$version.zip",
-                    "https://github.com/mattia72/DripGrepper/releases/download/v$version/DRipExtension.Dll.x86.Delphi11.v$version.zip"
+                    "https://github.com/mattia72/DripGrepper/releases/download/v$version/DRipExtension.Dll.x86.Delphi11.v$version.zip",
+                    "https://github.com/mattia72/DripGrepper/releases/download/v$version/DRipExtension.Dll.x86.Delphi12.v$version.zip"
                 ]
             },
             "32bit": {
                 "url": [
                     "https://github.com/mattia72/DripGrepper/releases/download/v$version/DRipGrepper.x86.v$version.zip",
-                    "https://github.com/mattia72/DripGrepper/releases/download/v$version/DRipExtension.Dll.x86.Delphi11.v$version.zip"
+                    "https://github.com/mattia72/DripGrepper/releases/download/v$version/DRipExtension.Dll.x86.Delphi11.v$version.zip",
+                    "https://github.com/mattia72/DripGrepper/releases/download/v$version/DRipExtension.Dll.x86.Delphi12.v$version.zip"
                 ]
             }
         }
