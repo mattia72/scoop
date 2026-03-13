@@ -40,6 +40,6 @@
     "depends": "ripgrep",
     "checkver": {
         "github": "https://github.com/mattia72/DRipGrepper",
-        "regex": "([\\d.]+(?:-alpha|-beta))"
+        "regex": "([\\d.]+(?:-(?:alpha|beta))?)"
     }
 }
